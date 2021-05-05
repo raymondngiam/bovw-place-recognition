@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.18)
 
 set(CMAKE_CXX_STANDARD 17)
 
+add_subdirectory(thirdparty/fmt/
+                 ${PROJECT_BINARY_DIR}/fmt)
+
 add_subdirectory(thirdparty/googletest/googlemock
                  ${PROJECT_BINARY_DIR}/gtest)
 include(CTest)
