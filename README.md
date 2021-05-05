@@ -1,4 +1,4 @@
-## googletest Example
+## Place recognition using Bag of Visual Words in C++
 
 ---
 

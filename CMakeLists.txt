@@ -1,4 +1,4 @@
-project(googletest_example)
+project(bovw_place_recognition)
 cmake_minimum_required(VERSION 3.18)
 
 set(CMAKE_CXX_STANDARD 17)
