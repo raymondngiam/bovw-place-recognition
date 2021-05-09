@@ -5,6 +5,7 @@
 ### Dependencies
 
 - CMake > 3.18
+- OpenCV == 4.5.1
 
 ### Pull third party submodules
 
@@ -26,12 +27,6 @@ $ make
 
 ```
 $ cd <repo_root>/build
-$ ctest -VV
+$ ../bin/bovw_place_recognition_test 
 ```
 
-### Run program
-
-```
-$ cd <repo_root>/bin
-$ ./main
-```
