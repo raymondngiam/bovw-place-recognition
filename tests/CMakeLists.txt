@@ -1,11 +1,13 @@
 set(TEST_BINARY ${PROJECT_NAME}_test)
 add_executable(${TEST_BINARY} 
-               test_main.cpp)
+               test_main.cpp
+               test_data.cpp)
 target_link_libraries(${TEST_BINARY} 
                       gtest
                       gtest_main
                       serialize
                       convert_dataset
+                      kmeans
                       ${OpenCV_LIBS}
                      )
                      

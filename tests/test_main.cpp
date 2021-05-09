@@ -5,6 +5,8 @@
 #include "serialize.hpp"
 #include "utils.hpp"
 #include "convert_dataset.hpp"
+#include "kmeans.hpp"
+#include "test_data.hpp"
 
 namespace fs = std::filesystem;
 const std::string lenna_path = "../data/lenna.png";
@@ -49,3 +51,27 @@ TEST(ConvertDatasetTest,DeserializeSIFTSFromBinaries){
   }
   fs::remove_all(bin_path);
 }
+
+static void TestKMeans(const cv::Mat& gt_cluster) {
+  auto& data = GetDummyData();
+
+  const int dict_size = gt_cluster.rows;
+  const int iterations = 10;
+  auto centroids = ipb::kMeans(data, dict_size, iterations);
+
+  EXPECT_EQ(centroids.rows, dict_size);
+  EXPECT_EQ(centroids.size, gt_cluster.size);
+
+  // Need to sort the output, otherwise the comparison will fail
+  cv::sort(centroids, centroids, cv::SORT_EVERY_COLUMN + cv::SORT_ASCENDING);
+  EXPECT_TRUE(mat_are_equal<float>(centroids, gt_cluster))
+      << "gt_centroids:\n"
+      << gt_cluster << "\ncomputed centroids:\n"
+      << centroids;
+}
+
+TEST(KMeansCluster, SelectAllFeatures) { TestKMeans(GetAllFeatures()); }
+TEST(KMeansCluster, Use2Words) { TestKMeans(Get2Kmeans()); }
+TEST(KMeansCluster, Use3Words) { TestKMeans(Get3Kmeans()); }
+TEST(KMeansCluster, MinimumSignificantCluster) { TestKMeans(Get5Kmeans()); }
+TEST(KMeansCluster, MoreLabelsThanFeatures) { TestKMeans(Get18Kmeans()); }
