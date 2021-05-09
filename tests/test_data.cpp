@@ -94,3 +94,19 @@ cv::Mat Get2Kmeans() {
 
   return data;
 }
+
+//  05,  05,  05,  05,  05,  05,  05,  05,  05,  05;
+//  15,  15,  15,  15,  15,  15,  15,  15,  15,  15;
+// 115, 115, 115, 115, 115, 115, 115, 115, 115, 115;
+cv::Mat Get3Features() {
+  // init some parameters
+  const int rows_num = 1;
+  const int cols_num = 10;
+  Mat data;
+
+  data.push_back(Mat_<float>(rows_num, cols_num, 5.0F));
+  data.push_back(Mat_<float>(rows_num, cols_num, 15.0F));
+  data.push_back(Mat_<float>(rows_num, cols_num, 115.0F));
+
+  return data;
+}
