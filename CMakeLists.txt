@@ -10,7 +10,7 @@ add_subdirectory(thirdparty/googletest/googlemock
                  ${PROJECT_BINARY_DIR}/gtest)
 include(CTest)
 
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 4.5.1 REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
