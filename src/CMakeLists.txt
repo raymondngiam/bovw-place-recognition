@@ -4,6 +4,7 @@ add_library(serialize STATIC serialize.cpp)
 add_library(convert_dataset STATIC convert_dataset.cpp)
 add_library(bow_dictionary STATIC bow_dictionary.cpp)
 add_library(kmeans STATIC kmeans.cpp)
+add_library(histogram STATIC histogram.cpp)
 
 add_executable(01-create_image_browser 01-create_image_browser.cpp)
 target_link_libraries(html_writer fmt)
