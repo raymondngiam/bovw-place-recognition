@@ -77,7 +77,7 @@ cv::Mat Get3Kmeans() {
   Mat data;
 
   data.push_back(Mat_<float>(rows_num, cols_num, 0.0F));
-  data.push_back(Mat_<float>(rows_num, cols_num, 30.000002F));
+  data.push_back(Mat_<float>(rows_num, cols_num, 30.0F));
   data.push_back(Mat_<float>(rows_num, cols_num, 70.0F));
 
   return data;
@@ -90,7 +90,7 @@ cv::Mat Get2Kmeans() {
   Mat data;
 
   data.push_back(Mat_<float>(rows_num, cols_num, 10.0F));
-  data.push_back(Mat_<float>(rows_num, cols_num, 60.000004F));
+  data.push_back(Mat_<float>(rows_num, cols_num, 60.0F));
 
   return data;
 }

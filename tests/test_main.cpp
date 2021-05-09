@@ -64,7 +64,7 @@ static void TestKMeans(const cv::Mat& gt_cluster) {
 
   // Need to sort the output, otherwise the comparison will fail
   cv::sort(centroids, centroids, cv::SORT_EVERY_COLUMN + cv::SORT_ASCENDING);
-  EXPECT_TRUE(mat_are_equal<float>(centroids, gt_cluster))
+  EXPECT_TRUE(mat_almost_equal<float>(centroids, gt_cluster, 1e-3))
       << "gt_centroids:\n"
       << gt_cluster << "\ncomputed centroids:\n"
       << centroids;
