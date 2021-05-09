@@ -50,6 +50,14 @@ int BowDictionary::total_features() const{
   return length;
 }
 
+void BowDictionary::set_vocabulary(cv::Mat dict){
+  _dictionary = dict;
+}
+
+void BowDictionary::build(int max_iter, int size, std::vector<cv::Mat> descriptors){
+  _dictionary = ipb::kMeans(descriptors, size, max_iter);
+}
+
 BowDictionary& BowDictionary::GetInstance(){
   if (instance==nullptr){
     instance = new BowDictionary();

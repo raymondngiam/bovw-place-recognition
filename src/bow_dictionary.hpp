@@ -24,6 +24,8 @@ namespace ipb{
     void set_size(int value);
     void set_descriptors(std::vector<cv::Mat> value);
     void set_params(int max_iter, int size, std::vector<cv::Mat> descriptors);
+    void set_vocabulary(cv::Mat);
+    void build(int max_iter, int size, std::vector<cv::Mat> descriptors);
     
     // result
     cv::Mat vocabulary() const;
