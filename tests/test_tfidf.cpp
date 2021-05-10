@@ -51,3 +51,21 @@ TEST(Tfidf, SingleTransform) {
       << trans;
 }
 
+
+
+TEST(Tfidf, MultipleTransform) {
+  cv::Mat M2 = (cv::Mat_<uint16_t>(2,5)<<\
+    5,2,1,0,0,\
+    3,1,1,0,2\
+  );
+  cv::Mat M2_result = (cv::Mat_<double>(2,5)<<\
+    -0.1395, 0., -0.0279, 0.    , 0.    ,\
+    -0.0956, 0., -0.0319, 0.    , 0.1980\
+  );
+  cv::Mat trans = tfidf.transform_hist(M2);
+  EXPECT_TRUE(mat_almost_equal<double>(trans,M2_result,1e-4))      
+      << "target histogram:\n"
+      << M2_result << "\ncomputed histogram:\n"
+      << trans;
+}
+
