@@ -20,7 +20,7 @@ bool mat_almost_equal(const cv::Mat& m1, const cv::Mat& m2, float epsilon) {
   for (int r=0; r<m1.rows; r++){
     for (int c=0; c<m1.cols; c++){
       bool status = std::fabs(m1.at<Tp>(r,c) - m2.at<Tp>(r,c))< epsilon;
-      almostEqual=&status;
+      almostEqual= almostEqual && status;
     }
   }
   return almostEqual;
