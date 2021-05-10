@@ -69,3 +69,37 @@ TEST(Tfidf, MultipleTransform) {
       << trans;
 }
 
+/*
+Input are item of index 0 and 3 from the histogram list
+*/
+TEST(Tfidf, SearchHistogram) {
+  cv::Mat M2 = (cv::Mat_<double>(2,5)<<\
+    5,2,1,0,0,\
+    1,2,1,0,0
+  );
+  std::vector target_indices {0,3};
+  cv::Mat target_distances = (cv::Mat_<double>(2,4)<<\
+    0, 0.1679, 0.2022, 0.5499,\
+    0, 0.1679, 0.3151, 0.5943\
+  );
+  cv::Mat trans = tfidf.transform_hist(M2);
+  // compute cosine distance
+  auto queries = tfidf.query_matches(trans,4);
+  auto indices = queries.first;
+  auto distances = queries.second;
+  std::cout<<"Selected index: \n"<<indices<<std::endl;
+  std::cout<<"distances: \n"<<distances<<std::endl;
+  EXPECT_TRUE(indices.at<int>(0,0)==target_indices[0])
+      << "target index:\n"
+      << target_indices[0] << "\ncomputed index:\n"
+      << indices.at<int>(0,0);
+  EXPECT_TRUE(indices.at<int>(1,0)==target_indices[1])
+      << "target index:\n"
+      << target_indices[1] << "\ncomputed index:\n"
+      << indices.at<int>(1,0);
+  EXPECT_TRUE(mat_almost_equal<double>(distances,target_distances,1e-4))      
+      << "target histogram:\n"
+      << target_distances << "\ncomputed histogram:\n"
+      << distances;
+}  
+  
