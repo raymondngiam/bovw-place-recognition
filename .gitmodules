@@ -4,3 +4,6 @@
 [submodule "thirdparty/fmt"]
 	path = thirdparty/fmt
 	url = https://github.com/fmtlib/fmt.git
+[submodule "thirdparty/matplotlib-cpp"]
+	path = thirdparty/matplotlib-cpp
+	url = https://github.com/lava/matplotlib-cpp.git

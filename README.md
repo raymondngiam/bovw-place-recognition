@@ -38,5 +38,15 @@ Converting full dataset...
 Image path: "../data/freiburg-full/images"
 Processed count: 692
 Loaded descriptor: 692
+Dict vocabulary: 
+Rows: 1000
+Cols: 128
 ```
 
+### Visualizing BOVW vocabulary
+```
+$ cd <repo_root>/bin
+$ ./03_plot_vocab 
+Loaded vocabulary: Rows[1000] Cols[128]
+```
+<img src='./images/vocabulary.png'>

@@ -13,6 +13,10 @@ include(CTest)
 find_package(OpenCV 4.5.1 REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
+find_package(Python3 COMPONENTS Development NumPy)
+include_directories(${Python3_INCLUDE_DIRS} 
+  ${Python3_NumPy_INCLUDE_DIRS})
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)

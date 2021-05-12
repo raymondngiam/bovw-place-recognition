@@ -14,3 +14,6 @@ target_link_libraries(01-create_image_browser image_browser)
 
 add_executable(02_compute_vocab 02_compute_vocab.cpp)
 target_link_libraries(02_compute_vocab serialize convert_dataset bow_dictionary kmeans ${OpenCV_LIBS})
+
+add_executable(03_plot_vocab 03_plot_vocab.cpp)
+target_link_libraries(03_plot_vocab Python3::Python Python3::NumPy ${OpenCV_LIBS} serialize)
