@@ -26,7 +26,17 @@ $ make
 ### Run tests
 
 ```
-$ cd <repo_root>/build
-$ ../bin/bovw_place_recognition_test 
+$ cd <repo_root>/bin
+$ ./bovw_place_recognition_test 
+```
+
+### Run building BOVW vocabulary
+```
+$ cd <repo_root>/bin
+$ ./02_compute_vocab 
+Converting full dataset...
+Image path: "../data/freiburg-full/images"
+Processed count: 692
+Loaded descriptor: 692
 ```
 
