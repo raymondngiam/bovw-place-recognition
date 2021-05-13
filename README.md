@@ -41,9 +41,9 @@ Saved image to ../images/scene_sift_300.png
 Saved image to ../images/scene_sift_700.png
 
 ```
-<img src='./images/scene_sift_000.png'>
-<img src='./images/scene_sift_300.png'>
-<img src='./images/scene_sift_700.png'>
+<img src='./images/scene_sift_000.png' width=480/>
+<img src='./images/scene_sift_300.png' width=480/>
+<img src='./images/scene_sift_700.png' width=480/>
 
 ### Generating BOVW vocabulary
 
@@ -92,7 +92,7 @@ Visualizing histogram...
 First image path: ../data/freiburg-full/bin/imageCompressedCam0_0003730.bin
 ```
 **Selected image for visualization of BOVW histogram:**
-<img src='./images/imageCompressedCam0_0003730.png'>
+<img src='./images/imageCompressedCam0_0003730.png' width=480/>
 
 <img src='./images/BOVW_histogram.png'>
 
