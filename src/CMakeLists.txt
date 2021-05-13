@@ -7,10 +7,13 @@ add_library(kmeans STATIC kmeans.cpp)
 add_library(histogram STATIC histogram.cpp)
 add_library(tfidf STATIC tfidf.cpp)
 
-add_executable(01-create_image_browser 01-create_image_browser.cpp)
+add_executable(00-create_image_browser 00-create_image_browser.cpp)
 target_link_libraries(html_writer fmt)
 target_link_libraries(image_browser html_writer)
-target_link_libraries(01-create_image_browser image_browser)
+target_link_libraries(00-create_image_browser image_browser)
+
+add_executable(01-visualizing_sift_keypoints 01-visualizing_sift_keypoints.cpp)
+target_link_libraries(01-visualizing_sift_keypoints fmt ${OpenCV_LIBS}) 
 
 add_executable(02_compute_vocab 02_compute_vocab.cpp)
 target_link_libraries(02_compute_vocab serialize convert_dataset bow_dictionary kmeans ${OpenCV_LIBS})
