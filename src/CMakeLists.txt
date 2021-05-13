@@ -32,3 +32,16 @@ target_link_libraries(04-compute_histogram
   ${OpenCV_LIBS}
   Python3::Python 
   Python3::NumPy )
+  
+add_executable(05-complete_search_solution 05-complete_search_solution.cpp)
+target_link_libraries(05-complete_search_solution
+  tfidf
+  histogram
+  bow_dictionary
+  kmeans
+  serialize
+  image_browser
+  html_writer
+  fmt
+  ${OpenCV_LIBS}
+)
