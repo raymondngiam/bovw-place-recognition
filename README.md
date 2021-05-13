@@ -96,3 +96,47 @@ First image path: ../data/freiburg-full/bin/imageCompressedCam0_0003730.bin
 
 <img src='./images/BOVW_histogram.png'>
 
+### Running the complete solution
+
+- Execute the binary with image path as first argument, and pipe the output to an html file.
+
+    ```shell
+    $ cd <repo_root>/bin
+    $ ./05-complete_search_solution ../data/freiburg/images/imageCompressedCam0_0000000.png > ../web_app/output.html
+    ```
+
+- Open the html with a web browser.
+
+### Results
+
+1. **Input image:** `imageCompressedCam0_0000000.png`
+
+    <img src='./data/freiburg/images/imageCompressedCam0_0000000.png' width=240/>
+
+    **Output:**
+
+    <img src='./images/Result_0000.png'>
+
+2. **Input image:** `imageCompressedCam0_0000300.png`
+
+    <img src='./data/freiburg/images/imageCompressedCam0_0000300.png' width=240/>
+
+    **Output:**
+
+    <img src='./images/Result_0300.png'>
+
+3. **Input image:** `imageCompressedCam0_0000700.png`
+
+    <img src='./data/freiburg/images/imageCompressedCam0_0000700.png' width=240/>
+
+    **Output:**
+
+    <img src='./images/Result_0700.png'>
+
+4. **Input image:** `imageCompressedCam0_0003730.png`
+
+    <img src='./images/imageCompressedCam0_0003730.png' width=240/>
+
+    **Output:**
+
+    <img src='./images/Result_3730.png'>
