@@ -3,3 +3,6 @@
 [Ll]ib
 freiburg-full
 vocabulary.bin
+img_path_full.txt
+tfidf_hist_full.bin
+tfidf_multiplier_full.bin
