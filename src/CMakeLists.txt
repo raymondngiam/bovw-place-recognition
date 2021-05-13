@@ -15,14 +15,14 @@ target_link_libraries(00-create_image_browser image_browser)
 add_executable(01-visualizing_sift_keypoints 01-visualizing_sift_keypoints.cpp)
 target_link_libraries(01-visualizing_sift_keypoints fmt ${OpenCV_LIBS}) 
 
-add_executable(02_compute_vocab 02_compute_vocab.cpp)
-target_link_libraries(02_compute_vocab serialize convert_dataset bow_dictionary kmeans ${OpenCV_LIBS})
+add_executable(02-compute_vocab 02-compute_vocab.cpp)
+target_link_libraries(02-compute_vocab serialize convert_dataset bow_dictionary kmeans ${OpenCV_LIBS})
 
-add_executable(03_plot_vocab 03_plot_vocab.cpp)
-target_link_libraries(03_plot_vocab Python3::Python Python3::NumPy ${OpenCV_LIBS} serialize)
+add_executable(03-plot_vocab 03-plot_vocab.cpp)
+target_link_libraries(03-plot_vocab Python3::Python Python3::NumPy ${OpenCV_LIBS} serialize)
 
-add_executable(04_compute_histogram 04_compute_histogram.cpp)
-target_link_libraries(04_compute_histogram 
+add_executable(04-compute_histogram 04-compute_histogram.cpp)
+target_link_libraries(04-compute_histogram 
   tfidf
   histogram
   bow_dictionary
