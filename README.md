@@ -2,6 +2,17 @@
 
 ---
 
+### Overview
+
+- Final project for University of Bonn's `Modern C++ for Computer Vision and Image Processing (2020)` course.
+- Task: Realize a visual place recognition system using Bag of Visual Words (BoVW).
+
+### Dataset
+
+- Download the Freiburg dataset from <a href='https://uni-bonn.sciebo.de/s/c2d0a1ebbe575fdba2a35a8033f1e2ab'>here</a>.
+
+- Extract it to the path `<repo_root>/data/freiburg-full/images/`.
+
 ### Dependencies
 
 - CMake > 3.18
@@ -45,7 +56,7 @@ Saved image to ../images/scene_sift_700.png
 <img src='./images/scene_sift_300.png' width=480/>
 <img src='./images/scene_sift_700.png' width=480/>
 
-### Generating BOVW vocabulary
+### Generating BoVW vocabulary
 
 - Building the vocabulary dictionary with parameter `KMEANS_MAX_ITER` = 30, `KMEANS_DICT_SIZE` = 1000.
 - These parameters can be modified in <a href='./src/02-compute_vocab.cpp'>02-compute_vocab.cpp</a>.
@@ -62,7 +73,7 @@ Saved image to ../images/scene_sift_700.png
     Cols: 128
     ```
 
-### Visualizing BOVW vocabulary
+### Visualizing BoVW vocabulary
 ```
 $ cd <repo_root>/bin
 $ ./03_plot_vocab 
@@ -70,7 +81,7 @@ Loaded vocabulary: Rows[1000] Cols[128]
 ```
 <img src='./images/vocabulary.png'>
 
-### Generating BOVW histogram
+### Generating BoVW histogram
 ```
 $ cd <repo_root>/bin
 $ ./04_compute_histogram 
@@ -91,7 +102,7 @@ multiplier_tfidf saved to ../data/tfidf_multiplier_full.bin
 Visualizing histogram...
 First image path: ../data/freiburg-full/bin/imageCompressedCam0_0003730.bin
 ```
-**Selected image for visualization of BOVW histogram:**
+**Selected image for visualization of BoVW histogram:**
 <img src='./images/imageCompressedCam0_0003730.png' width=480/>
 
 <img src='./images/BOVW_histogram.png'>
