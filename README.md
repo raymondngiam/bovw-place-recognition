@@ -109,7 +109,7 @@ First image path: ../data/freiburg-full/bin/imageCompressedCam0_0003730.bin
 
 ### Running the complete solution
 
-- Execute the binary with image path as first argument, and pipe the output to an html file.
+- Run the executable with the desired image path as first argument, and pipe the output to an html file in `<repo_root>/web_app/`.
 
     ```shell
     $ cd <repo_root>/bin
@@ -117,6 +117,9 @@ First image path: ../data/freiburg-full/bin/imageCompressedCam0_0003730.bin
     ```
 
 - Open the html with a web browser.
+- The output is an array of 9 images sorted by similarity score in descending order.
+- The image with the highest matching score is at index 1 with a green bounding box.
+- Each of the displayed images are labeled with their respective filename and matching score with respect the query image.
 
 ### Results
 
