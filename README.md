@@ -30,7 +30,22 @@ $ cd <repo_root>/bin
 $ ./bovw_place_recognition_test 
 ```
 
-### Run building BOVW vocabulary
+### Visualizing SIFT keypoints in dataset images
+```
+$ cd <repo_root>/bin
+$ ./01-visualizing_sift_keypoints 
+
+Testing SIFT
+Saved image to ../images/scene_sift_000.png
+Saved image to ../images/scene_sift_300.png
+Saved image to ../images/scene_sift_700.png
+
+```
+<img src='./images/scene_sift_000.png'>
+<img src='./images/scene_sift_300.png'>
+<img src='./images/scene_sift_700.png'>
+
+### Generating BOVW vocabulary
 ```
 $ cd <repo_root>/bin
 $ ./02_compute_vocab 
