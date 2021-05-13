@@ -46,17 +46,21 @@ Saved image to ../images/scene_sift_700.png
 <img src='./images/scene_sift_700.png'>
 
 ### Generating BOVW vocabulary
-```
-$ cd <repo_root>/bin
-$ ./02_compute_vocab 
-Converting full dataset...
-Image path: "../data/freiburg-full/images"
-Processed count: 692
-Loaded descriptor: 692
-Dict vocabulary: 
-Rows: 1000
-Cols: 128
-```
+
+- Building the vocabulary dictionary with parameter `KMEANS_MAX_ITER` = 30, `KMEANS_DICT_SIZE` = 1000.
+- These parameters can be modified in <a href='./src/02-compute_vocab.cpp'>02-compute_vocab.cpp</a>.
+
+    ```
+    $ cd <repo_root>/bin
+    $ ./02_compute_vocab 
+    Converting full dataset...
+    Image path: "../data/freiburg-full/images"
+    Processed count: 692
+    Loaded descriptor: 692
+    Dict vocabulary: 
+    Rows: 1000
+    Cols: 128
+    ```
 
 ### Visualizing BOVW vocabulary
 ```
