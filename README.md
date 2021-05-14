@@ -119,7 +119,7 @@ First image path: ../data/freiburg-full/bin/imageCompressedCam0_0003730.bin
 - Open the html with a web browser.
 - The output is an array of 9 images sorted by similarity score in descending order.
 - The image with the highest matching score is at index 1 with a green bounding box.
-- Each of the displayed images are labeled with their respective filename and matching score with respect the query image.
+- Each of the displayed images are labeled with their respective filename and matching score relative to the query image.
 
 ### Results
 
